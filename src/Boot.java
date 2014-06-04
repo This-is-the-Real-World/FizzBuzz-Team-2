@@ -9,7 +9,7 @@ public class Boot {
         try {
             throw new Exception();
         } catch(Exception a) {
-            System.out.println("Exceptions");
+            System.out.println("LOL IT BROKED #WASJAKE");
         }
     }
 }
