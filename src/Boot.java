@@ -8,7 +8,7 @@ public class Boot {
 
         try {
             throw new Exception();
-        } catch (Exception e) {
+        } catch(Exception a) {
             System.out.println("Exceptions");
         }
     }
