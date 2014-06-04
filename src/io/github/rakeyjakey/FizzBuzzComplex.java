@@ -17,9 +17,9 @@ public class FizzBuzzComplex {
 
     public static void main(String[] args) {
 
-        List<Integer> fizzList = new ArrayList<>();
-        List<Integer> buzzList = new ArrayList<>();
-        List<Integer> fizzBuzzList = new ArrayList<>();
+        final List<Integer> fizzList = new ArrayList<>();
+        final List<Integer> buzzList = new ArrayList<>();
+        final List<Integer> fizzBuzzList = new ArrayList<>();
 
         for (int i = 1; i <= 1000; i++) {
 
