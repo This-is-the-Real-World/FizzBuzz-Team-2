@@ -1,15 +1,21 @@
 package io.github.kennehisftw;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by Kenneth on 6/4/2014.
  */
 public class FizzBuzz {
 
     public FizzBuzz() {
-        System.out.println("Simple answer");
+       /* System.out.println("Simple answer");
         simple();
         System.out.println("\nFancy answer");
-        fancy();
+        fancy(); */
+
+        anotherWay();
+
     }
 
     public void simple() {
@@ -23,6 +29,26 @@ public class FizzBuzz {
             } else {
                 System.out.println(i);
             }
+        }
+    }
+
+    private enum Type {
+        FIZZ, BUZZ, FIZZ_BUZZ, NAN;
+
+        @Override
+        public String toString() {
+            return name().charAt(0) + name().substring(1).toLowerCase().replaceAll("_", " ");
+        }
+    }
+
+    public void anotherWay() {
+        final Map<Integer, Type> fizzMap = new HashMap<>();
+        for(int i = 0; i <= 1000; i++) {
+            fizzMap.put(i, i % 15 == 0 ? Type.FIZZ_BUZZ : i % 5 == 0 ? Type.BUZZ : i % 3 ==  0 ? Type.FIZZ : Type.NAN);
+        }
+        for(int i : fizzMap.keySet()) {
+            final Type type = fizzMap.get(i);
+            System.out.println(i + " " + (type != Type.NAN ? type : ""));
         }
     }
 
