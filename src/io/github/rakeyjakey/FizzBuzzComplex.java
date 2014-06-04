@@ -63,10 +63,10 @@ public class FizzBuzzComplex {
         System.out.println(fizzList + "\n");
 
         System.out.println("All of the following were Buzz numbers: ");
-        System.out.println(buzzList + "\n");
+        System.out.println(buzzList+ "\n");
 
         System.out.println("All of the following were FizzBuzz numbers: ");
-        System.out.println(fizzBuzzList + "\n");
+        System.out.println(fizzBuzzList+ "\n");
 
     }
 }
