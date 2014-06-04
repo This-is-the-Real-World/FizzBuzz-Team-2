@@ -1,5 +1,9 @@
+import com.sun.java.swing.plaf.windows.WindowsLookAndFeel;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -9,9 +13,10 @@ import java.net.URL;
 public class Boot extends JFrame {
 
     private Image loadingImage;
+    private final JButton button;
 
     public Boot() {
-        super("So spinny");
+        super("Click me!");
 
         try {
             loadingImage = Toolkit.getDefaultToolkit().createImage(new URL("http://i.imgur.com/LcWmfbD.gif"));
@@ -19,11 +24,33 @@ public class Boot extends JFrame {
             e.printStackTrace();
         }
 
+        button = new JButton();
+        button.setBorder(null);
+        button.setIcon(new ImageIcon(loadingImage));
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JOptionPane.showConfirmDialog(getContentPane(), "Jake is a nub");
+            }
+        });
+
         getContentPane().setBackground(Color.BLACK);
-        getContentPane().add(new JLabel(new ImageIcon(loadingImage)));
+        getContentPane().add(button);
     }
 
     public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    UIManager.setLookAndFeel(new WindowsLookAndFeel());
+                } catch (UnsupportedLookAndFeelException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
+
         final Boot boot = new Boot();
         boot.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         boot.pack();
