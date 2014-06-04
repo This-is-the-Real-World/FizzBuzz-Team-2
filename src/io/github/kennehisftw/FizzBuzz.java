@@ -1,22 +1,13 @@
 package io.github.kennehisftw;
 
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 /**
  * Created by Kenneth on 6/4/2014.
  */
 public class FizzBuzz {
-
-    public FizzBuzz() {
-       /* System.out.println("Simple answer");
-        simple();
-        System.out.println("\nFancy answer");
-        fancy(); */
-
-        anotherWay();
-
-    }
 
     public void simple() {
         for(int i = 0; i <= 1000; i++) {
@@ -42,7 +33,7 @@ public class FizzBuzz {
     }
 
     public void anotherWay() {
-        final Map<Integer, Type> fizzMap = new HashMap<>();
+        final Map<Integer, Type> fizzMap = new LinkedHashMap<>();
         for(int i = 0; i <= 1000; i++) {
             fizzMap.put(i, i % 15 == 0 ? Type.FIZZBUZZ : i % 5 == 0 ? Type.BUZZ : i % 3 ==  0 ? Type.FIZZ : Type.NAN);
         }
@@ -59,7 +50,13 @@ public class FizzBuzz {
     }
 
     public static void main(String[] args) {
-        new FizzBuzz();
+       final FizzBuzz fizzbuzz = new FizzBuzz();
+        System.out.println("Fancy");
+        fizzbuzz.fancy();
+        System.out.println("\nSimple");
+        fizzbuzz.simple();
+        System.out.println("\nAnother way");
+        fizzbuzz.anotherWay();
     }
 
 }
