@@ -1,4 +1,4 @@
-package kenneh;
+package io.github.kennehisftw;
 
 /**
  * Created by Kenneth on 6/4/2014.
