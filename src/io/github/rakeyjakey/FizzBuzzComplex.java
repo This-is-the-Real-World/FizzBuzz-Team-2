@@ -6,10 +6,9 @@ import java.util.List;
 /**
  * Created by Jake on 6/4/14.
  */
-public class FizzBuzz {
+public class FizzBuzzComplex {
 
     public static void main(String[] args) {
-
 
         List<Integer> fizzList = new ArrayList<>();
         List<Integer> buzzList = new ArrayList<>();
@@ -61,20 +60,13 @@ public class FizzBuzz {
         System.out.println("\n");
 
         System.out.println("All of the following were Fizz numbers: ");
-        for (int i : fizzList)
-            System.out.print(i + ", ");
-
-        System.out.println("\n");
+        System.out.println(fizzList + "\n");
 
         System.out.println("All of the following were Buzz numbers: ");
-        for (int i : fizzList)
-            System.out.print(i + ", ");
-
-        System.out.println("\n");
-
+        System.out.println(buzzList+ "\n");
 
         System.out.println("All of the following were FizzBuzz numbers: ");
-        for (int i : fizzBuzzList)
-            System.out.print(i + ", ");
+        System.out.println(fizzBuzzList+ "\n");
+
     }
 }

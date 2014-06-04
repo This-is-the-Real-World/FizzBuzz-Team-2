@@ -33,18 +33,18 @@ public class FizzBuzz {
     }
 
     private enum Type {
-        FIZZ, BUZZ, FIZZ_BUZZ, NAN;
+        FIZZ, BUZZ, FIZZBUZZ, NAN;
 
         @Override
         public String toString() {
-            return name().charAt(0) + name().substring(1).toLowerCase().replaceAll("_", " ");
+            return name().charAt(0) + name().substring(1).toLowerCase();
         }
     }
 
     public void anotherWay() {
         final Map<Integer, Type> fizzMap = new HashMap<>();
         for(int i = 0; i <= 1000; i++) {
-            fizzMap.put(i, i % 15 == 0 ? Type.FIZZ_BUZZ : i % 5 == 0 ? Type.BUZZ : i % 3 ==  0 ? Type.FIZZ : Type.NAN);
+            fizzMap.put(i, i % 15 == 0 ? Type.FIZZBUZZ : i % 5 == 0 ? Type.BUZZ : i % 3 ==  0 ? Type.FIZZ : Type.NAN);
         }
         for(int i : fizzMap.keySet()) {
             final Type type = fizzMap.get(i);
