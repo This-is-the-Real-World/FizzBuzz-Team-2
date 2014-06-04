@@ -11,6 +11,8 @@ public class Boot extends JFrame {
     private Image loadingImage;
 
     public Boot() {
+        super("So spinny");
+
         try {
             loadingImage = Toolkit.getDefaultToolkit().createImage(new URL("http://i.imgur.com/LcWmfbD.gif"));
         } catch (MalformedURLException e) {
