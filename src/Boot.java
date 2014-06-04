@@ -26,7 +26,13 @@ public class Boot extends JFrame {
 
         button = new JButton();
         button.setBorder(null);
-        button.setIcon(new ImageIcon(loadingImage));
+
+        final ImageIcon imageIcon = new ImageIcon(loadingImage);
+        button.setIcon(imageIcon);
+        button.setSelectedIcon(imageIcon);
+        button.setRolloverIcon(imageIcon);
+        button.setRolloverSelectedIcon(imageIcon);
+
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
