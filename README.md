@@ -1,3 +1,3 @@
-FizzBuzz Team 1
+FizzBuzz Team 2
 =================
 
