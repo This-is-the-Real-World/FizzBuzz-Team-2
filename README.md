@@ -1,6 +1,3 @@
-Project-1 Team 1
+FizzBuzz Team 1
 =================
 
-This is the first project undertaken by both teams.
-
-// edited by kenneh :D
