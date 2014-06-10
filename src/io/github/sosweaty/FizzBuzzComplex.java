@@ -60,15 +60,15 @@ public class FizzBuzzComplex extends JPanel implements ActionListener {
             for (int i = 0; i <= 1000; i++)
                 //if i is a multiple of 3 & 5 print fizzbuzz + i
                 if (i % 3 == 0 && i % 5 == 0)
-                    textArea.append("FizzBuzz :" + i + newline);
+                    textArea.append("FizzBuzz: " + i + newline);
 
                     //else if i is a multiple of 3 print fizz + i
                 else if (i % 3 == 0)
-                    textArea.append("Fizz :" + i + newline);
+                    textArea.append("Fizz: " + i + newline);
 
                     //else if i is a multiple of 5 print buzz + i
                 else if (i % 5 == 0)
-                    textArea.append("Buzz :" + i + newline);
+                    textArea.append("Buzz: " + i + newline);
                     //else if i is not a multiple of 5 and 3 print i
                 else
                     textArea.append(i + newline);
