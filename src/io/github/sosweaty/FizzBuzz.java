@@ -1,9 +1,5 @@
 package io.github.sosweaty;
 
-/**
- * Created by Jamie on 06/06/2014.
- */
-
 public class FizzBuzz {
 
     public static void main(String[] args) {
@@ -24,7 +20,6 @@ public class FizzBuzz {
                 //else if i is not a multiple of 5 and 3 print i
             else
                 System.out.println(i);
-
     }
 }
 
