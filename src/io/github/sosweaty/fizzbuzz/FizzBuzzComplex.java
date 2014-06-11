@@ -3,7 +3,7 @@ package io.github.sosweaty.fizzbuzz;
 import javax.swing.*;
 import java.awt.*;
 
-class FizzBuzzComplex extends JPanel {
+public class FizzBuzzComplex extends JPanel {
 
     private final static String newline = "\n";
     private JTextArea textArea;
@@ -31,8 +31,7 @@ class FizzBuzzComplex extends JPanel {
                     textArea.append(i + newline);
 
         });
-
-        textArea = new JTextArea(10, 30);
+        textArea = new JTextArea();
         textArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textArea);
 
@@ -47,6 +46,7 @@ class FizzBuzzComplex extends JPanel {
         c.weightx = 1.0;
         c.weighty = 1.0;
         add(scrollPane, c);
+
     }
 
     private static void createAndShowGUI() {
