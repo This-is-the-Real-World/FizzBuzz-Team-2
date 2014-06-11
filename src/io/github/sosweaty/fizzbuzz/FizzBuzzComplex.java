@@ -12,7 +12,7 @@ public class FizzBuzzComplex extends JPanel {
         super(new GridBagLayout());
 
         JButton myButton = new JButton("Start FizzBuzz");
-        myButton.addActionListener(e -> {
+        myButton.addActionListener(evt -> {
             //targets set i to 0 if i is less than 1000 than add 1 to i
             for (int i = 0; i <= 1000; i++)
                 //if i is a multiple of 3 & 5 print fizzbuzz + i
