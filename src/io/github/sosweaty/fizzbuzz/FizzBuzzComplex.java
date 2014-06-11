@@ -31,6 +31,8 @@ public class FizzBuzzComplex extends JPanel {
                     textArea.append(i + newline);
 
         });
+
+        //Make textArea, not editable
         textArea = new JTextArea();
         textArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(textArea);
@@ -43,8 +45,8 @@ public class FizzBuzzComplex extends JPanel {
         add(myButton, c);
 
         c.fill = GridBagConstraints.BOTH;
-        c.weightx = 1.0;
-        c.weighty = 1.0;
+        c.weightx = .5;
+        c.weighty = .5;
         add(scrollPane, c);
 
     }
@@ -58,7 +60,7 @@ public class FizzBuzzComplex extends JPanel {
         frame.add(new FizzBuzzComplex());
 
         //Sets Frame to 300px, 300px & visible
-        frame.pack();
+        frame.setSize(300, 300);
         frame.setVisible(true);
     }
 
