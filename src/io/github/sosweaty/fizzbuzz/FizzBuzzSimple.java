@@ -1,6 +1,6 @@
-package io.github.sosweaty;
+package io.github.sosweaty.fizzbuzz;
 
-public class FizzBuzz {
+public class FizzBuzzSimple {
 
     public static void main(String[] args) {
 

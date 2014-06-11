@@ -1,4 +1,4 @@
-package io.github.sosweaty;
+package io.github.sosweaty.fizzbuzz;
 
 import javax.swing.*;
 import java.awt.*;
